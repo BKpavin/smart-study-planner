@@ -238,9 +238,8 @@ function generatePlan() {
 
         }
         // ⭐ 2. REVISION DAY
-        
-        if (isRevisionDay) 
-            {
+        else if (isRevisionDay) {
+
             let revisionSubject = subjects.find(sub => {
                 let exam = new Date(sub.examDate);
                 let rev = new Date(exam);
@@ -248,30 +247,17 @@ function generatePlan() {
                 return current.toDateString() === rev.toDateString();
             });
 
-            if (revisionSubject) 
-                {
-                    plan.push({
-                        day: dayCount,
-                        date: formatted,
-                        subject: `🔥 Revise ${revisionSubject.name}`,
-                        done: false,
-                        type: "revision"
-                    });
-                }
-            }
-
-        if (examSubjects.length > 0) {
-            examSubjects.forEach(sub => {
+            if (revisionSubject) {
                 plan.push({
                     day: dayCount,
                     date: formatted,
-                    subject: `📌 ${sub.name} EXAM`,
+                    subject: `🔥 Revise ${revisionSubject.name}`,
                     done: false,
-                    type: "exam"
+                    type: "revision"
                 });
-            });
-}
+            }
 
+        }
         // ⭐ 3. STUDY DAY
         else {
 

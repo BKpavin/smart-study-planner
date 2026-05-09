@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Study Planner </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<main class="container">
+
+<!-- ================= HEADER ================= -->
+<header>
+    <h1>📚 Smart Study Planner </h1>
+    <p>Plan smarter. Study better.</p>
+    <h2>🔥 Progress: <span id="headerprogress">0%</span></h2>
+
+    <button id="darkToggle">🌙 Dark Mode</button>
+</header>
+
+<!-- ================= STATS DASHBOARD ================= -->
+
+
+<!-- ================= ADD SUBJECT ================= -->
+<section class="card">
+    <h2>➕ Add Subject</h2>
+
+    <input type="text" id="subject" placeholder="Enter subject name">
+
+    <select id="difficulty">
+        <option value="1">Easy</option>
+        <option value="2">Medium</option>
+        <option value="3">Hard</option>
+    </select>
+
+    <input type="date" id="examDate">
+
+    <div class="btn-group">
+        <button onclick="addSubject()">➕ Add Subject</button>
+        <button onclick="clearSubjects()">🧹 Clear All</button>
+    </div>
+</section>
+
+<!-- ================= SUBJECT LIST ================= -->
+<section class="card">
+    <h2>📌 Added Subjects</h2>
+    <ul id="subjectList"></ul>
+</section>
+
+<!-- ================= GENERATE ================= -->
+<section class="card">
+    <button class="generate-btn" onclick="generatePlan()">
+        📘 Generate Smart Study Plan
+    </button>
+</section>
+
+<!-- ================= AI COACH ================= -->
+
+
+<!-- ================= STUDY PLAN ================= -->
+<section class="card">
+    <h2>📅 Study Plan</h2>
+    <ul id="planList"></ul>
+</section>
+
+<!-- ================= EXAM RATING ================= -->
+<section class="card">
+    <h2>📝 Exam Performance Rating</h2>
+
+    <ul id="ratingList"></ul>
+</section>
+
+<!-- ================= PROGRESS BAR ================= -->
+<section class="card">
+    <h2>📈 Progress</h2>
+
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+
+    <p id="progressLabel">0% Completed</p>
+</section>
+<!-- ================= SUBJECT PROGRESS ================= -->
+<section class="card">
+    <h2>📊 Subject-wise Progress</h2>
+    <ul id="subjectProgressList"></ul>
+</section>
+
+
+</main>
+
+<footer style="text-align:center;margin:15px;font-size:12px;">
+Built with by B.K Pavin
+</footer>
+
+<script src="js.js"></script>
+
+</body>
+</html>

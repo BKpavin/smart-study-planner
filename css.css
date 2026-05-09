@@ -1,0 +1,347 @@
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BODY
+======================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+}
+
+/* =======================
+   SUBJECT PROGRESS
+======================= */
+
+.subject-progress-item {
+    margin-bottom: 12px;
+}
+
+.subject-progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.subject-progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.subject-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: width 0.4s ease;
+}
+
+/* =======================
+   PRIORITY LABELS
+======================= */
+
+.high-priority {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.medium-priority {
+    color: #ffd633;
+    font-weight: bold;
+}
+
+.low-priority {
+    color: #4dff88;
+    font-weight: bold;
+}
+
+/* =======================
+   MAIN CONTAINER
+======================= */
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #fff;
+}
+
+header p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* =======================
+   CARD
+======================= */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* =======================
+   TITLES
+======================= */
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+/* =======================
+   INPUTS
+======================= */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+
+    border-radius: 8px;
+    border: none;
+
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* dropdown fix */
+select option {
+    color: #000;
+    background: #fff;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+button {
+    width: 100%;
+    padding: 10px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #667eea;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: scale(1.03);
+}
+
+/* Generate button */
+.generate-btn {
+    background: #28a745;
+}
+
+.generate-btn:hover {
+    background: #218838;
+}
+
+/* =======================
+   SUBJECT LIST
+======================= */
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 12px;
+    margin: 8px 0;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+/* small buttons */
+li button {
+    width: auto;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* =======================
+   PLAN ITEM FIX (IMPORTANT)
+======================= */
+.plan-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+
+    border-radius: 12px;
+}
+
+/* checkbox BIG */
+.plan-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* text */
+.plan-item span {
+    flex: 1;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* =======================
+   PROGRESS BAR
+======================= */
+.progress-bar {
+    width: 100%;
+    height: 15px;
+
+    background: #444;
+    border-radius: 10px;
+
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+
+    transition: width 0.4s ease;
+}
+
+/* =======================
+   DARK MODE
+======================= */
+body.dark {
+    background: linear-gradient(135deg, #121212, #1e1e2f);
+}
+
+body.dark .container {
+    background: rgba(30,30,50,0.9);
+}
+
+body.dark .card {
+    background: rgba(40,40,70,0.9);
+}
+
+body.dark input,
+body.dark select {
+    background: #333;
+    color: #fff;
+}
+
+body.dark li {
+    background: rgba(50,50,80,0.9);
+}
+
+body.dark button {
+    background: #444;
+}
+
+body.dark .generate-btn {
+    background: #16a34a;
+}
+
+/* =======================
+   CHECKBOX ANIMATION FIX
+======================= */
+.plan-item input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid #aaa;
+    border-radius: 6px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* hover */
+.plan-item input[type="checkbox"]:hover {
+    border-color: #00c6ff;
+}
+
+/* checked */
+.plan-item input[type="checkbox"]:checked {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+}
+
+/* tick */
+.plan-item input[type="checkbox"]::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease;
+}
+
+.plan-item input[type="checkbox"]:checked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 22px;
+    }
+}
